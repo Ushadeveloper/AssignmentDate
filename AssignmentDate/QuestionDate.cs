@@ -10,8 +10,7 @@ namespace AssignmentDate
     {
         public void Dates(string datee)
         {
-           
-           
+
             string[] result = datee.Split('/');
             int day, month, year;
             day = Convert.ToInt32(result[0]);
@@ -103,7 +102,7 @@ namespace AssignmentDate
                 Console.WriteLine("false");
 
             }
-           // Console.WriteLine(result);
+           // Console.WriteLine(result);kkkk
           
 
 
@@ -191,12 +190,11 @@ namespace AssignmentDate
                 }
             }
            
-          //  Console.WriteLine(intArray[0]);
             
             //1234
             for (int k=1; k < consecutiveNum.Length; k++)
             {
-                // Console.WriteLine(intArray[0]);
+                
                 if (consecutiveNum[k] != consecutiveNum[k - 1] + 1)
                 {
                     r = false;
@@ -246,6 +244,20 @@ namespace AssignmentDate
             //}
             //Console.WriteLine("Max Value in Array :" + min);
             Console.ReadKey();
+        }
+        public void inttostring()
+        {
+            int[] intarray = { 198, 200, 354, 14, 540 };
+            object[] array = new object[] { 10, "hello", 5, "world", "word" };
+           // Array.Sort(intarray);
+            string[] stringarray = { string.Empty, string.Empty, string.Empty, string.Empty, string.Empty };
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                stringarray[i] += array[i].ToString();
+
+                Console.Write("{0},",stringarray[i]);
+            }
         }
 
     }

@@ -19,7 +19,8 @@ namespace AssignmentDate
             ///////////////////////////////////////////////////////////////////////////////////////////
 
             //Consecutive sort........................................................
-            obj.FindElementSort();
+            //obj.FindElementSort();
+            obj.inttostring();
 
             //date....................................................
             //Console.Write("Enter a Date in DD/MM/YYYY formate : ");
