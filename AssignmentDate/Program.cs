@@ -14,18 +14,30 @@ namespace AssignmentDate
         {
 
             QuestionDate obj = new QuestionDate();
-            obj.Samewords();
+            //Samewords.......................................................
+            // obj.Samewords();
+            ///////////////////////////////////////////////////////////////////////////////////////////
+
+            //Consecutive sort........................................................
+            obj.FindElementSort();
+
+            //date....................................................
             //Console.Write("Enter a Date in DD/MM/YYYY formate : ");
             //string datee = Console.ReadLine();
-            //date....................................................
-           // obj.Dates(datee);
+            // obj.Dates(datee);
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            
 
             //sum......................................
-             //obj.NaturalSum();
+            //obj.NaturalSum();
+            //////////////////////////////////////////////////////////////////////////////////
+           
 
             //overtime------------------------------
             // obj.OvertimePay();
-
+            ///////////////////////////////////////////////////////////////////////////
+            
+           
             /////////////////////////////Inheritace practice////////////////////////
             //OvertimeSalary assignment = new OvertimeSalary();
             //assignment.NaturalSum();

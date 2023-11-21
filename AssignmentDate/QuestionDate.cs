@@ -67,26 +67,34 @@ namespace AssignmentDate
         }
         public void Samewords()
         {
-            string st1 = "Marta appreciated deep perpendicular right trapezoids";
+            Console.WriteLine("Enter a string.......... ");
+            string st1 = Console.ReadLine(); 
             char[] charArray = st1.ToCharArray();
           //  Console.WriteLine(charArray);
             List<char> charList = new List<char>(charArray);
           //  Console.WriteLine(charList[1]);
             int result = 0;
-
+            int space = 0;
             for (int i = 1; i < charList.Count; i++)
             {
-                if (charList[i] == ' ' && charList[i - 1] == charList[i + 1])
+                if (charList[i] == ' ')
                 {
-                     //Console.WriteLine($"Characters '{charList[i - 1]}' and '{charList[i + 1]}' match before space.");
+                    space++;
+                    if (charList[i] == ' ' && charList[i - 1] == charList[i + 1])
+                    {
 
 
-                    result++;
-            
-                    
-                }  
+
+                        Console.WriteLine($"Characters '{charList[i - 1]}' and '{charList[i + 1]}' match before space.");
+
+
+                        result++;
+
+
+                    }
+                }
             }
-            if(result==5)
+            if(result==space)
             {
                 Console.WriteLine("true");
             }
@@ -162,6 +170,82 @@ namespace AssignmentDate
             }
 
 
+        }
+        public void FindElementSort()
+        {
+            int[] consecutiveNum = new int[] { 5, 1, 4, 3, 2 };
+            int temp = 0;
+            int i = 0;
+            bool r = true;
+            for (; i <= consecutiveNum.Length - 1; i++)
+            {
+                for (int j = i + 1; j < consecutiveNum.Length; j++)
+                {
+                    if (consecutiveNum[i] > consecutiveNum[j])
+                    {
+                        temp = consecutiveNum[i];
+                        consecutiveNum[i] = consecutiveNum[j];
+                        consecutiveNum[j] = temp;
+
+                    }
+                }
+            }
+           
+          //  Console.WriteLine(intArray[0]);
+            
+            //1234
+            for (int k=1; k < consecutiveNum.Length; k++)
+            {
+                // Console.WriteLine(intArray[0]);
+                if (consecutiveNum[k] != consecutiveNum[k - 1] + 1)
+                {
+                    r = false;
+                    break;
+                }
+                
+            }
+            if (r==false)
+                Console.WriteLine("False");
+            else
+                Console.WriteLine("True");
+
+             
+           
+            Console.ReadLine();
+            //int[] originalArray = { 1, 2, 3, 4, 5 };-----------
+            //int[] newArray = new int[originalArray.Length - 1];
+
+            //for (int i = 0; i < newArray.Length; i++)
+            //{
+            //    newArray[i] = originalArray[i];
+            //    Console.WriteLine(newArray[i]);
+            //}
+
+
+           
+            //int[] compare = new int[5];
+            //int min = numbers[0];
+            //foreach (int num in numbers)
+            //{
+            //    Console.Write(num + "  ");
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("=================================");
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+
+            //    if (numbers[i] < min)
+            //    {
+
+            //        compare[i] = numbers[i];
+            //        //compare.CopyTo(numbers[i]);
+
+            //      //  compare[i] = Convert.ToInt32(Console.ReadLine(numbers[i]));
+            //        min = numbers[i];
+            //    }
+            //}
+            //Console.WriteLine("Max Value in Array :" + min);
+            Console.ReadKey();
         }
 
     }
